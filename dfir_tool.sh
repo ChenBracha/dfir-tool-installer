@@ -106,6 +106,13 @@ run_installation() {
     # Install Wireshark
     install_package "wireshark" "sudo apt install -y wireshark"
     sudo usermod -aG wireshark "$USER" # Allow non-root users to capture packets
+	
+    # Install YARA
+    install_package "yara" "sudo apt-get install yara"
+
+
+    #Install Suricata
+    install_package "suricata" "sudo apt-get install suricata"	
 
     echo "Installation completed. Check $LOG_FILE for details."
 }
